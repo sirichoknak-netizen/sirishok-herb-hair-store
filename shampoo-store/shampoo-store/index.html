@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ร้านแชมพูสมุนไพร ดูแลเส้นผมด้วยสูตรอ่อนโยน สั่งซื้อง่าย ส่งตรงถึงบ้าน">
+  <title>HERB & HAIR | แชมพูสมุนไพร</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#home"><span class="brand-mark">H</span> HERB <i>&</i> HAIR</a><nav><a href="#products">สินค้า</a><a href="#about">เกี่ยวกับเรา</a><a href="#order">สั่งซื้อ</a><button class="cart-button" onclick="scrollToOrder()">ตะกร้า <span id="cart-count">0</span></button></nav></header>
+<main>
+<section class="hero" id="home"><div class="hero-copy"><p class="eyebrow">NATURAL CARE • EVERYDAY CONFIDENCE</p><h1>ดูแลเส้นผม<br>เริ่มต้นจาก<br><em>ธรรมชาติ</em></h1><p class="hero-text">เติมความสดชื่นให้เส้นผมและหนังศีรษะ ด้วยแชมพูสูตรสมุนไพรที่ใส่ใจในทุกวัน</p><a class="primary-link" href="#products">เลือกชมสินค้า <span>↗</span></a><div class="hero-note">สูตรดูแลประจำวัน · ใช้ง่าย · ส่งถึงบ้าน</div></div><div class="hero-art"><div class="sun"></div><img src="assets/hero-bottles.svg" alt="ผลิตภัณฑ์แชมพู HERB & HAIR"></div></section>
+<section class="benefits" id="about"><div><b>01</b><span>ดูแลเส้นผมทุกวัน</span></div><div><b>02</b><span>เลือกสูตรให้เหมาะกับคุณ</span></div><div><b>03</b><span>สั่งซื้อง่าย ส่งถึงบ้าน</span></div></section>
+<section class="products section" id="products"><div class="section-heading"><div><p class="eyebrow">OUR PRODUCTS</p><h2>เลือกสูตรที่ใช่</h2></div><p>สองสูตรสำหรับการดูแลเส้นผมในแบบของคุณ</p></div><div class="product-grid" id="product-grid"></div></section>
+<section class="story"><div class="story-art"><img src="assets/botanical.svg" alt="ภาพใบไม้สมุนไพร"></div><div><p class="eyebrow">A LITTLE CARE, A LOT OF LOVE</p><h2>ความใส่ใจ<br>ในทุกหยด</h2><p>HERB & HAIR คือร้านตัวอย่างสำหรับโปรเจกต์จำลอง เราออกแบบประสบการณ์เลือกซื้อให้เรียบง่าย ตั้งแต่เลือกสูตรจนถึงการจัดส่ง</p><a href="#products" class="text-link">ค้นหาสูตรที่เหมาะกับคุณ →</a></div></section>
+<section class="order-section section" id="order"><div class="section-heading"><div><p class="eyebrow">CHECKOUT</p><h2>สรุปรายการสั่งซื้อ</h2></div><p>กรอกข้อมูลให้ครบถ้วนเพื่อจัดส่งสินค้า</p></div><div class="checkout-grid"><div class="panel"><h3>ตะกร้าสินค้า</h3><div id="cart-items" class="cart-items"><p class="empty">ยังไม่มีสินค้าในตะกร้า</p></div><div class="total"><span>ยอดรวม</span><strong id="total">฿0</strong></div></div><form class="panel" id="checkout-form"><h3>ข้อมูลสำหรับจัดส่ง</h3><label>ชื่อผู้รับ<input name="customer" required placeholder="ชื่อ-นามสกุล"></label><label>เบอร์โทรศัพท์<input name="phone" required inputmode="tel" pattern="[0-9+() -]{9,15}" placeholder="08X-XXX-XXXX"></label><label>ที่อยู่จัดส่ง<textarea name="address" rows="3" required placeholder="บ้านเลขที่ ถนน ตำบล/แขวง อำเภอ/เขต จังหวัด รหัสไปรษณีย์"></textarea></label><label>หมายเหตุ (ถ้ามี)<input name="note" placeholder="รายละเอียดเพิ่มเติม"></label><button class="primary-button" type="submit">ยืนยันคำสั่งซื้อ</button><p class="form-note">* โปรเจกต์ตัวอย่างนี้ยังไม่รองรับการชำระเงินออนไลน์</p><p id="form-status" role="status"></p></form></div></section>
+<section class="admin section" id="admin"><div class="section-heading"><div><p class="eyebrow">STORE OPERATIONS</p><h2>จัดเตรียมคำสั่งซื้อ</h2></div><p>สำหรับผู้ดูแลร้าน: ตรวจสอบรายการหยิบและแพ็กสินค้า</p></div><div class="admin-toolbar"><button class="outline-button" onclick="renderOrders()">รีเฟรชรายการ</button><button class="outline-button" onclick="exportOrders()">ส่งออก CSV</button><button class="outline-button" onclick="clearDemoOrders()">ล้างข้อมูลตัวอย่าง</button></div><div id="orders-list"><p class="empty">ยังไม่มีคำสั่งซื้อ</p></div></section>
+</main>
+<footer><a class="brand" href="#home"><span class="brand-mark">H</span> HERB <i>&</i> HAIR</a><p>โปรเจกต์ตัวอย่างเว็บไซต์ร้านค้าออนไลน์ · 2026</p></footer>
+<script src="app.js"></script>
+</body></html>
